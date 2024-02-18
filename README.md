@@ -13,7 +13,5 @@ images on gallery.
 
 ## Demonstração da aplicação
 
-<h1 align="center">
-  <img alt="NextLevelWeek" title="#NextLevelWeek" src="https://github.com/clopesbraga/ImgurCatsGallery/assets/58059669/93c7534e-9ba9-478d-8f72-0e90099b8fd5"
- />
-</h1>
+
+[Screen_recording_20240218_182904.webm](https://github.com/clopesbraga/ImgurCatsGallery/assets/58059669/da4ac7f4-4b43-4d4c-b403-83058e8904a3)
