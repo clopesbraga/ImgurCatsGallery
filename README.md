@@ -1,5 +1,5 @@
-## Badgeds
-![GitHub language count](https://img.shields.io/github/languages/count/clopesbraga/ImgurCatsGallery) |  ![GitHub repo size](https://img.shields.io/github/repo-size/clopesbraga/ImgurCatsGallery) |  ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/clopesbraga/ImgurCatsGallery/master)
+
+![GitHub language count](https://img.shields.io/github/languages/count/clopesbraga/ImgurCatsGallery) |  ![GitHub repo size](https://img.shields.io/github/repo-size/clopesbraga/ImgurCatsGallery)  |  ![GitHub last commit (master)](https://img.shields.io/github/last-commit/clopesbraga/ImgurCatsGallery/master)
 
 
 ## Título e Descrição
