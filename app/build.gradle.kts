@@ -46,6 +46,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
     testImplementation("junit:junit:4.13.2")
     implementation("org.mockito:mockito-core:5.8.0")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
@@ -64,5 +65,8 @@ dependencies {
 
     //CARREGAMENTO DE IMAGEM
     implementation("io.coil-kt:coil:2.5.0")
+
+    //KOIN
+    implementation ("io.insert-koin:koin-android:3.4.0")
 
 }
