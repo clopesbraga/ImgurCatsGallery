@@ -9,9 +9,10 @@ import com.example.catslist.databinding.ActivityMainBinding
 import com.example.catslist.network.RequestEndpoint
 import com.example.catslist.network.RetrofitService
 import com.example.catslist.view.adapter.ListAdpter
+import com.example.catslist.viewmodel.GalleryViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
-
+import org.koin.android.ext.android.inject
 
 
 class MainActivity : AppCompatActivity() {
@@ -19,8 +20,9 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var _binding: ActivityMainBinding
     private val binding get()= _binding
+
     private lateinit  var adapter: ListAdpter
-    var operation: Boolean = true
+    private val viewModel : GalleryViewModel by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,11 +38,10 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
 
         bringCatsList()
-
+        observe()
     }
 
-    fun bringCatsList():Boolean{
-
+    fun bringCatsList(){
 
         val remote= RetrofitService.createService(RequestEndpoint::class.java)
         val response= remote.sendRequest()
@@ -50,16 +51,21 @@ class MainActivity : AppCompatActivity() {
 
                 adapter= ListAdpter(it.data)
                 binding.ltvcats.adapter= adapter
-                operation
 
-            }) {
+            }) { it ->
 
-                it.message?.let { Log.d("ERRO_REQUEST",it) }
-                operation.not()
+                it.message?.let {Log.d( getString(R.string.erro_request),it) }
 
             }
+    }
 
-        return operation
+    private fun observe(){
+
+        viewModel.itemsgallery.observe(this){
+
+            adapter.atualizaLista(it)
+        }
+
 
     }
 

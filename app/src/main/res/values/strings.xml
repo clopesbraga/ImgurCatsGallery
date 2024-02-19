@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ImgurCatsGallery</string>
+    <string name="erro_request">Erro_request</string>
 </resources>

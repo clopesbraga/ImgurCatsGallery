@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.catslist.databinding.RowOfCatsBinding
+import com.example.catslist.model.CatsListModel
 import com.example.catslist.model.Data
 import com.example.catslist.view.holder.ListHolder
 
@@ -37,11 +38,11 @@ class ListAdpter(itemsList: MutableList<Data>): RecyclerView.Adapter<ListHolder>
         return repoList.count()
     }
 
-//    fun atualizaLista(list: List<Data>):List<Data>{
-//
-//        repoList = list
-//        notifyDataSetChanged()
-//        return repoList
-//    }
+    fun atualizaLista(list: List<Data>):List<Data>{
+
+        repoList = list
+        notifyDataSetChanged()
+        return repoList
+    }
 
 }
